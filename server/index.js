@@ -13,7 +13,8 @@ app.use(express.json())
 app.use(cors())
 
 // app.use(cors({
-//     origin: 'https://ctd-project-client.netlify.app/' || 'http://localhost:3000',
+//     // origin: 'http://localhost:3000',
+//     origin: 'https://sustainable-pantry.netlify.app',
 //     methods: ['GET', 'POST', 'PUT', 'DELETE'],
 //     allowedHeaders: ['Content-Type', 'Authorization'],
 //     credentials: true
