@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+    background-color: #231942;
+}
+
+.appContent {
+    padding: 0 32px;
+    /* max-width: 1140px; */
+    /* margin: 0 auto; */
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 900;
+    text-decoration: none;
+    color: #fcbf49;
+    margin: 32px;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    margin: 32px;
+}
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+    background-color: #231942;
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+    background-color: #231942;
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fcbf49;
+}
+.navLinks li:not(:last-child) {
+    list-style: none;
+    margin-bottom: 30px;
+}
+.navLink {
+    text-decoration: none;
+    color: #231942;
+    font-size: 18px;
+    font-weight: 600;
+}
+.navLinks{
+    position: fixed;
+    top: -100%;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+}
+.navLinks.active{
+    top: 0;
+    background-color: #fcbf49;
+    padding: 40px 0;
+    transition: top 0.5s ease-in-out;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item{
+    background-color: #5e548e;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 16px;
+}
+.item h3{
+    margin-bottom: 5px;
+    color: #fff;
+}
+.item span{
+    border-bottom: 1px solid #9f86c0;
+    margin-bottom: 10px;
+}
+.item p{
+    margin-bottom: 10px;
+    color: #e7e6f7;
+}
+.itemButtons button{
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #5e548e;
+    color: #e7e6f7;
+}
+.itemButtons button:hover{
+    background-color: #9f86c0;
+}
+
+.decreaseButton , .increaseButton{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #9f86c0;
+}
+.deleteButton{
+    border: 1px solid #9f86c0;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.addPopup{
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    font-size: 28px;
+    font-weight: 900;
+    background-color: #fcbf49;
+    color: #231942;
+    cursor: pointer;
+}
+
+.addPopup:hover{
+    width: 65px;
+    height: 65px;
+}
+
+.overlayActive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 32px;
+    display: block;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: backdrop-filter 0.5s ease-in-out;
+}
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 400px;
+    background-color: #D9DBF1;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup input{
+    padding: 10px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid #D9DBF1;
+}
+
+.closePopup span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    color: #231942;
+}
+
+.popup h3{
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: #231942;
+    text-align: center;
+}
+.popupSubmitButton{
+    color: #231942;
+}
+
+
+.userEmailForm {
+    margin: 10px;
+    /* border-bottom: 1px solid #5e548e; */
+}
+
+.userEmailForm form {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 20px 0;
+}
+.userEmailForm p {
+    color: #D9DBF1;
+}
+.userEmailForm input {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border: 1px solid #D9DBF1;
+    color: #D9DBF1;
+}
+.userEmailInput {
+    width: 500px;
+    background-color: #231942;
+    border: 1px solid #D9DBF1;
+}
+.userEmailInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #D9DBF1;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #D9DBF1;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #D9DBF1;
+  }
+
+.userEmailSubmitBtn{
+    background-color: #231942;
+    border: 1px solid #5e548e;
+    cursor: pointer;
+}
+.userEmailSubmitBtn:hover{
+    background-color: #5e548e;
+    border: 1px solid #5e548e;
+}
+
+.discoverBtn {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #231942;
+    border: 1px solid #5e548e;
+    color: #D9DBF1;
+    cursor: pointer;
+}
+.discoverBtn:hover {
+    background-color: #5e548e;
+    border: 1px solid #5e548e;
+}
+.discover {
+    padding: 10px;
+}
+.discover h1 {
+    color: #D9DBF1;
+}
+.discover p {
+    color: #D9DBF1;
+    padding-bottom: 20px;
+}
+.discoverSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+.discoverSectionMap {
+    padding: 20px;
+}
+
+#map{
+    margin: 20px;
+    height: 500px;
+}
