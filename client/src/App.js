@@ -5,7 +5,7 @@ import Discover from './pages/Discover';
 import Navbar from './components/Navbar';
 
 
-const API_BASE = "https://sustainable-pantry-server.herokuapp.com";
+const API_BASE = "https://sustainable-pantry-server.herokuapp.com/";
 // const API_BASE = "http://localhost:3001";
 
 export default function App() {
@@ -20,14 +20,14 @@ export default function App() {
     }, []);
 
     function GetItems() {
-        fetch(API_BASE + "/items")
+        fetch(API_BASE + "items")
             .then(res => res.json())
             .then(data => setItems(data))
             .catch(err => console.error(err));
     }
 
     async function increaseItem(id) {
-        const data = await fetch(API_BASE + "/item/increase/" + id, {method: "PUT"})
+        const data = await fetch(API_BASE + "item/increase/" + id, {method: "PUT"})
             .then(res => res.json());
         
         setItems(items => items.map(item => {
@@ -39,7 +39,7 @@ export default function App() {
     }
 
     async function decreaseItem(id) {
-        const data = await fetch(API_BASE + "/item/decrease/" + id, {method: "PUT"})
+        const data = await fetch(API_BASE + "item/decrease/" + id, {method: "PUT"})
             .then(res => res.json());
         
         setItems(items => items.map(item => {
@@ -51,7 +51,7 @@ export default function App() {
     }
 
     async function deleteItem(id) {
-        const data = await fetch(API_BASE + "/item/delete/" + id, {method: "DELETE"})
+        const data = await fetch(API_BASE + "item/delete/" + id, {method: "DELETE"})
             .then(res => res.json());
         
         setItems(items => items.filter(item => item._id !== data._id));
