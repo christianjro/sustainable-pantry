@@ -5,7 +5,7 @@ import Discover from './pages/Discover';
 import Navbar from './components/Navbar';
 
 
-const API_BASE = "https://sustainable-pantry-server.herokuapp.com/";
+const API_BASE = "https://sustainable-pantry-server.herokuapp.com";
 // const API_BASE = "http://localhost:3001";
 
 export default function App() {
