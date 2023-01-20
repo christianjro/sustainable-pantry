@@ -15,7 +15,7 @@ export default function ItemCard({item, increaseItem, decreaseItem, deleteItem, 
   }
 
   function itemQuantityCheck() {
-    if(item.quantity == 0) {
+    if(item.quantity === 0) {
       sendEmail(item)
     }
   }

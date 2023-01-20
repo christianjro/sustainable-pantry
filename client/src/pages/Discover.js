@@ -9,9 +9,9 @@ export default function Discover() {
   const [stores, setStores] = useState([]);
   const [loadingLocation, setLoadingLocation] = useState(true)
   const [loadingStores, setLoadingStores] = useState(true)
-  const [loading, setLoading] = useState(true)
+  // const [loading, setLoading] = useState(true)
   const [map, setMap] = useState(null)
-  const mapContainer = useRef(null);
+  // const mapContainer = useRef(null);
 
   // Get user location
   function getUserLocation() {
