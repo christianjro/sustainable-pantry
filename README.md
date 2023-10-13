@@ -32,8 +32,8 @@ Upon rendering, the user is asked to enter an email address where they can be no
 
 #### Add a Food Item
 
-<img width="462" alt="AddAFoodItem(1)" src="https://github.com/christianjro/sustainable-pantry/assets/66981081/d9a72465-6d64-4a1d-8527-fcedc94883a8">
-<img width="462" alt="AddAFoodItem(2)" src="https://github.com/christianjro/sustainable-pantry/assets/66981081/7850b5b2-592c-4e83-8ce2-b6dd5324a4f3">
+<img width="400" alt="AddAFoodItem(1)" src="https://github.com/christianjro/sustainable-pantry/assets/66981081/d9a72465-6d64-4a1d-8527-fcedc94883a8">
+<img width="400" alt="AddAFoodItem(2)" src="https://github.com/christianjro/sustainable-pantry/assets/66981081/7850b5b2-592c-4e83-8ce2-b6dd5324a4f3">
 
 Clicking on the bottom right button will trigger a modal that prompts the user to enter an Item name, Description, and Quantity. This data is sent to the backend server which then adds it to the MongoDB database. I set the item model schema so that the Description property is optional and that Item name and Quantity are required to be successsfully added to the database. 
 
